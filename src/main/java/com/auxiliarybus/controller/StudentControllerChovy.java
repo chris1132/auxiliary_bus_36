@@ -4,7 +4,12 @@ package com.auxiliarybus.controller;
 import com.auxiliarybus.entity.Student;
 import com.auxiliarybus.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 
 /**
@@ -18,8 +23,12 @@ public class StudentControllerChovy {
 
     @ResponseBody
     @RequestMapping(value = "/hi", method = RequestMethod.GET)
-    public String test() {
-        return studentService.getStudentById(1).getName();
+    public String test(ModelAndView model,
+                       @RequestParam(value = "id", defaultValue = "1", required = false) int id,
+                       @RequestParam(value="name",defaultValue = "wch",required = false)String name) {
+
+
+        return studentService.getStudentById(id).getName();
     }
 
 
@@ -34,5 +43,6 @@ public class StudentControllerChovy {
         studentService.insert(student);
         return "success";
     }
+
 
 }
