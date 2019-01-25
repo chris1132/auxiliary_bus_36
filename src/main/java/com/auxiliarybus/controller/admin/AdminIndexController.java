@@ -1,4 +1,4 @@
-package com.auxiliarybus.controller;
+package com.auxiliarybus.controller.admin;
 
 
 import com.auxiliarybus.entity.Student;
@@ -16,19 +16,21 @@ import javax.servlet.http.HttpServletResponse;
  * Created by wangchaohui on 2017/9/7.
  */
 @RestController
-public class StudentControllerChovy {
+public class AdminIndexController {
 
     @Autowired
     private StudentService studentService;
 
     @ResponseBody
-    @RequestMapping(value = "/hi", method = RequestMethod.GET)
-    public String test(ModelAndView model,
+    @RequestMapping(value = "/index.htm", method = RequestMethod.GET)
+    public ModelAndView test(ModelAndView model,
                        @RequestParam(value = "id", defaultValue = "1", required = false) int id,
                        @RequestParam(value="name",defaultValue = "wch",required = false)String name) {
 
-
-        return studentService.getStudentById(id).getName();
+        var studentName =  studentService.getStudentById(id).getName();
+        model.addObject("studentName",studentName);
+        model.setViewName("admin/dash_board");
+        return model;
     }
 
 

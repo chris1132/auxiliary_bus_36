@@ -1,4 +1,4 @@
-package com.auxiliarybus.aop;
+package com.auxiliarybus.aop.aspect;
 
 import org.springframework.web.servlet.ModelAndView;
 
