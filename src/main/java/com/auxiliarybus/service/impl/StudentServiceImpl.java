@@ -6,6 +6,7 @@ import com.auxiliarybus.mapper.StudentMapper;
 import com.auxiliarybus.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import rpcPackage.rpc.netty_zookeeper_spring.server.RpcService;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -15,6 +16,7 @@ import java.util.List;
  * Created by wangchaohui on 2018/1/18.
  */
 @Service
+@RpcService(StudentServiceImpl.class)
 public class StudentServiceImpl implements StudentService {
 
     @Autowired(required = false)

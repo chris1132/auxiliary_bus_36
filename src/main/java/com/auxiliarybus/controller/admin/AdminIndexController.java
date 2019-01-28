@@ -21,7 +21,7 @@ public class AdminIndexController {
     @Autowired
     private StudentService studentService;
 
-    @ResponseBody
+
     @RequestMapping(value = "/index.htm", method = RequestMethod.GET)
     public ModelAndView test(ModelAndView model,
                        @RequestParam(value = "id", defaultValue = "1", required = false) int id,
@@ -33,7 +33,7 @@ public class AdminIndexController {
         return model;
     }
 
-
+    @ResponseBody
     @RequestMapping(value = "/insert", method = RequestMethod.POST)
     public String insert(@RequestParam(value = "name", defaultValue = "chris11", required = false) String name,
                          @RequestParam(value = "age", defaultValue = "18", required = false) int age,
