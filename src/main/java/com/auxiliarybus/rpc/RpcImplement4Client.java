@@ -23,7 +23,9 @@ public class RpcImplement4Client {
     private TimeUnit timeOutUnit = TimeUnit.MILLISECONDS;
 
     public Object client4Async(String className, String funcName, Object... args) throws Exception {
-        final RpcClient rpcClient = new RpcClient(new ServiceDiscovery("127.0.0.1:2181"));
+        ServiceDiscovery serviceDiscovery = new ServiceDiscovery("127.0.0.1:2181");
+        final RpcClient rpcClient = new RpcClient(serviceDiscovery,serviceDiscovery.discoverService(className));
+
         RPCFuture future = iAsyncObjectProxy.call(className, funcName, args);
         Object result = future.get(timeOut, timeOutUnit);
         return result;

@@ -28,14 +28,11 @@ public class RpcServerAutoRun implements ApplicationRunner, ApplicationContextAw
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        String serverAddress = "127.0.0.1:18866";
-        ServiceRegistry serviceRegistry = new ServiceRegistry("127.0.0.1:2181");
+        String serverAddress = "192.168.2.144:18866";
+        ServiceRegistry serviceRegistry = new ServiceRegistry("192.168.2.144:2181");
         RpcServer rpcServer = new RpcServer(serverAddress, serviceRegistry);
 
         rpcServer.handlerMap = handlerMap;
-
-//        HelloService helloService = new HelloServiceImpl();
-//        rpcServer.addService("HelloService", helloService);
 
         try {
             rpcServer.start();
@@ -46,15 +43,16 @@ public class RpcServerAutoRun implements ApplicationRunner, ApplicationContextAw
 
     /**
      * 服务在启动的时候扫描得到所有的服务接口及其实现：
+     * handlerMap key:接口名， value具体实现的方法
      */
     @Override
     public void setApplicationContext(ApplicationContext ctx) throws BeansException {
         Map<String, Object> serviceBeanMap = ctx.getBeansWithAnnotation(RpcService.class);
         if (MapUtils.isNotEmpty(serviceBeanMap)) {
             for (Object serviceBean : serviceBeanMap.values()) {
+                //com.auxiliarybus.service.impl.StudentServiceImpl
                 String interfaceName = serviceBean.getClass().getAnnotation(RpcService.class).value().getName();
-                String[] interfaceatr = interfaceName.split("\\.");
-                handlerMap.put(interfaceatr[interfaceatr.length - 1], serviceBean);
+                handlerMap.put(interfaceName, serviceBean);
             }
         }
     }
