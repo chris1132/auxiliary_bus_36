@@ -1,15 +1,20 @@
 package com.auxiliarybus.prim;
 
-import java.util.Scanner;
 
 /**
  * Created by wangch on 2019/4/24
  */
 public class Prim {
-
     int currentSize=0;
     int maxSize=0;
-    VertexWG[] minHeap=new VertexWG[20];
+    VertexWG[] minHeap;
+
+    public Prim() {}
+
+    public Prim(int verNum) {
+        minHeap = new VertexWG[verNum];
+    }
+
     /**
      * 通过weight构建以EdgeNode为节点的最小堆
      * @param_edgeNode 为带权的边集
@@ -73,18 +78,15 @@ public class Prim {
      * @param graph 图
      */
     public void primSpanningTree(GraphWG graph){
-        System.out.println("请输入root节点：");
-        @SuppressWarnings("resource")
-        Scanner scan=new Scanner(System.in);
-        String root=scan.next();
-        VertexWG verRoot=CreateWG.getVertex(graph,root);
+        VertexWG verRoot=CreateWG.getVertex(graph,0);
+
         verRoot.key=0;
         VertexWG[] verArray=new VertexWG[graph.verNum];
         for(int i = 0; i<graph.verNum; i++){
             verArray[i]=graph.vertexArray[i];
         }
         createMinHeap(verArray);
-        System.out.println("利用prim算法生成最小生成树的顺序为:");
+        System.out.println("利用prim算法生成最小生成树,从嘉兴一中出发的顺序为:");
         while(currentSize>=1){
             //minHeap中的对象和graph.vertexArray中的不是同一个对象 //
             // minHeaph中的对象已经是新产生的对象了
@@ -96,7 +98,9 @@ public class Prim {
             //这里需要注意，每次删除节点更新完key值之后，需要利用新的key值重新构建最小堆
             createMinHeap(vArray);
             VertexWG u=deleteMinHeap();
-            System.out.println(">."+u.verName);
+
+            if(u.count>0)System.out.println("--->"+u.verName+"（公交站）  "+u.count+"个人");
+
             VertexWG current=u.nextNode;
             //注意下面while循环中的两个不同的顶点对象：
             // currentNow、current
@@ -110,15 +114,7 @@ public class Prim {
             }
         }
     }
-    public static void main(String[] args) {
-        GraphWG graph=new GraphWG();
-        CreateWG createWG=new CreateWG();
-        //2274   113700=2274*50
-        createWG.initialWg(graph,5,7);
-        //createWG.outputWG(graph);
-        Prim prim=new Prim();
-        prim.primSpanningTree(graph);
-    }
+
 
 
 }

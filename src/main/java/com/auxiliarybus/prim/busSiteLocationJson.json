@@ -1,0 +1,1082 @@
+[
+{
+"id": 457,
+"siteCode": 0,
+"siteName": "南湖区税务局",
+"longitude": "120.79022527635532",
+"latitude": "30.7508766966644",
+"surveyCount": 2
+},
+{
+"id": 619,
+"siteCode": 0,
+"siteName": "甪里街双溪路",
+"longitude": "120.7874304134804",
+"latitude": "30.761700774269876",
+"surveyCount": 2
+},
+{
+"id": 577,
+"siteCode": 0,
+"siteName": "石堰苑南区西",
+"longitude": "120.77737031423176",
+"latitude": "30.71130756144623",
+"surveyCount": 1
+},
+{
+"id": 362,
+"siteCode": 0,
+"siteName": "皇都花苑",
+"longitude": "120.78587473165449",
+"latitude": "30.752895930148412",
+"surveyCount": 2
+},
+{
+"id": 737,
+"siteCode": 0,
+"siteName": "秀洲大道万科金域缇香",
+"longitude": "120.68926269527435",
+"latitude": "30.78456895612113",
+"surveyCount": 4
+},
+{
+"id": 265,
+"siteCode": 0,
+"siteName": "佳园小区",
+"longitude": "120.7138735055768",
+"latitude": "30.76751797931075",
+"surveyCount": 1
+},
+{
+"id": 764,
+"siteCode": 0,
+"siteName": "亚太花苑",
+"longitude": "120.81403791907772",
+"latitude": "30.743449416509616",
+"surveyCount": 1
+},
+{
+"id": 645,
+"siteCode": 0,
+"siteName": "市图书馆",
+"longitude": "120.76505541903319",
+"latitude": "30.745003151522234",
+"surveyCount": 1
+},
+{
+"id": 525,
+"siteCode": 0,
+"siteName": "市青少年宫",
+"longitude": "120.74626386188748",
+"latitude": "30.77680081584654",
+"surveyCount": 1
+},
+{
+"id": 682,
+"siteCode": 0,
+"siteName": "西马桥小区",
+"longitude": "120.74494421520268",
+"latitude": "30.781898159571973",
+"surveyCount": 2
+},
+{
+"id": 927,
+"siteCode": 0,
+"siteName": "长桥路腊梅路",
+"longitude": "120.74361648000965",
+"latitude": "30.724084065801254",
+"surveyCount": 2
+},
+{
+"id": 15,
+"siteCode": 0,
+"siteName": "北师大附属学校",
+"longitude": "120.80305695536163",
+"latitude": "30.74428391860068",
+"surveyCount": 4
+},
+{
+"id": 482,
+"siteCode": 0,
+"siteName": "南溪农贸市场",
+"longitude": "120.80038011076218",
+"latitude": "30.750959675116157",
+"surveyCount": 4
+},
+{
+"id": 401,
+"siteCode": 0,
+"siteName": "双溪路望湖路",
+"longitude": "120.79018772541349",
+"latitude": "30.747160825323075",
+"surveyCount": 2
+},
+{
+"id": 144,
+"siteCode": 0,
+"siteName": "放鹤洲小区一期",
+"longitude": "120.74557185203813",
+"latitude": "30.748673004259732",
+"surveyCount": 1
+},
+{
+"id": 552,
+"siteCode": 0,
+"siteName": "三水湾农贸市场",
+"longitude": "120.77914412687328",
+"latitude": "30.75768729186631",
+"surveyCount": 1
+},
+{
+"id": 58,
+"siteCode": 0,
+"siteName": "东升东路城北路",
+"longitude": "120.74043274034774",
+"latitude": "30.771915225368204",
+"surveyCount": 1
+},
+{
+"id": 230,
+"siteCode": 0,
+"siteName": "洪兴花园（广发银行嘉兴分行）",
+"longitude": "120.71814359022666",
+"latitude": "30.76383041660195",
+"surveyCount": 1
+},
+{
+"id": 253,
+"siteCode": 0,
+"siteName": "国际会展中心西",
+"longitude": "120.75284063804483",
+"latitude": "30.73704056762251",
+"surveyCount": 2
+},
+{
+"id": 585,
+"siteCode": 0,
+"siteName": "市妇幼保健院",
+"longitude": "120.7808235519789",
+"latitude": "30.74017094211493",
+"surveyCount": 2
+},
+{
+"id": 641,
+"siteCode": 0,
+"siteName": "城北路同乐路",
+"longitude": "120.74386060290455",
+"latitude": "30.770578557217558",
+"surveyCount": 1
+},
+{
+"id": 720,
+"siteCode": 0,
+"siteName": "洪兴路秀园路（智富城北）",
+"longitude": "120.68657934661917",
+"latitude": "30.760211840340915",
+"surveyCount": 2
+},
+{
+"id": 242,
+"siteCode": 0,
+"siteName": "越秀北路洪越路",
+"longitude": "120.73323905745815",
+"latitude": "30.766794307960126",
+"surveyCount": 2
+},
+{
+"id": 97,
+"siteCode": 0,
+"siteName": "大润发超市东",
+"longitude": "120.71555793284041",
+"latitude": "30.759649452111905",
+"surveyCount": 1
+},
+{
+"id": 197,
+"siteCode": 0,
+"siteName": "国际中港城西",
+"longitude": "120.78995169092792",
+"latitude": "30.739221473426444",
+"surveyCount": 2
+},
+{
+"id": 658,
+"siteCode": 0,
+"siteName": "城南路文昌路",
+"longitude": "120.74123740290466",
+"latitude": "30.74822580708918",
+"surveyCount": 1
+},
+{
+"id": 938,
+"siteCode": 0,
+"siteName": "望鹤路放鹤洲路",
+"longitude": "120.74114620781546",
+"latitude": "30.74243970660031",
+"surveyCount": 1
+},
+{
+"id": 51,
+"siteCode": 0,
+"siteName": "常秀街农贸市场",
+"longitude": "120.72166801156096",
+"latitude": "30.761156837300735",
+"surveyCount": 2
+},
+{
+"id": 693,
+"siteCode": 0,
+"siteName": "秀园路中山西路（智富城西）",
+"longitude": "120.68602144714454",
+"latitude": "30.75706795565131",
+"surveyCount": 1
+},
+{
+"id": 328,
+"siteCode": 0,
+"siteName": "嘉州美都（实验小学）",
+"longitude": "120.730964544872",
+"latitude": "30.77584215733848",
+"surveyCount": 8
+},
+{
+"id": 99,
+"siteCode": 0,
+"siteName": "大树银河湾",
+"longitude": "120.72564304389923",
+"latitude": "30.72168065732661",
+"surveyCount": 1
+},
+{
+"id": 380,
+"siteCode": 0,
+"siteName": "康桥花园西",
+"longitude": "120.78505933980587",
+"latitude": "30.74281777519633",
+"surveyCount": 1
+},
+{
+"id": 60,
+"siteCode": 0,
+"siteName": "禾兴公寓",
+"longitude": "120.74765324602718",
+"latitude": "30.767375088471145",
+"surveyCount": 2
+},
+{
+"id": 499,
+"siteCode": 0,
+"siteName": "大树花园一期",
+"longitude": "120.71283257376423",
+"latitude": "30.76032009546604",
+"surveyCount": 3
+},
+{
+"id": 74,
+"siteCode": 0,
+"siteName": "城南花园",
+"longitude": "120.74375867897628",
+"latitude": "30.750673844812706",
+"surveyCount": 2
+},
+{
+"id": 809,
+"siteCode": 0,
+"siteName": "洪兴路友谊街",
+"longitude": "120.72829842994268",
+"latitude": "30.76424988109669",
+"surveyCount": 1
+},
+{
+"id": 662,
+"siteCode": 0,
+"siteName": "文昌路农贸市场",
+"longitude": "120.73774516746994",
+"latitude": "30.749318442930736",
+"surveyCount": 3
+},
+{
+"id": 440,
+"siteCode": 0,
+"siteName": "长水路南湖大道",
+"longitude": "120.75741112713418",
+"latitude": "30.721482935093494",
+"surveyCount": 5
+},
+{
+"id": 62,
+"siteCode": 0,
+"siteName": "中环北路城北路",
+"longitude": "120.72963416961005",
+"latitude": "30.781547902985892",
+"surveyCount": 1
+},
+{
+"id": 142,
+"siteCode": 0,
+"siteName": "放鹤洲公园",
+"longitude": "120.74391961149502",
+"latitude": "30.745999005772376",
+"surveyCount": 1
+},
+{
+"id": 357,
+"siteCode": 0,
+"siteName": "南溪花园",
+"longitude": "120.76816678212819",
+"latitude": "30.756265833434117",
+"surveyCount": 1
+},
+{
+"id": 413,
+"siteCode": 0,
+"siteName": "罗马都市",
+"longitude": "120.79266629678679",
+"latitude": "30.74880859911902",
+"surveyCount": 9
+},
+{
+"id": 821,
+"siteCode": 0,
+"siteName": "越秀花园",
+"longitude": "120.73036909464926",
+"latitude": "30.75635803644404",
+"surveyCount": 1
+},
+{
+"id": 5,
+"siteCode": 0,
+"siteName": "巴黎都市",
+"longitude": "120.77708244737481",
+"latitude": "30.74335720711177",
+"surveyCount": 7
+},
+{
+"id": 206,
+"siteCode": 0,
+"siteName": "好一家家居",
+"longitude": "120.6897926330215",
+"latitude": "30.750231265554486",
+"surveyCount": 2
+},
+{
+"id": 621,
+"siteCode": 0,
+"siteName": "水仙坊",
+"longitude": "120.77055394872696",
+"latitude": "30.751872484295955",
+"surveyCount": 4
+},
+{
+"id": 391,
+"siteCode": 0,
+"siteName": "大树金港湾",
+"longitude": "120.73856592324886",
+"latitude": "30.731604241741273",
+"surveyCount": 3
+},
+{
+"id": 888,
+"siteCode": 0,
+"siteName": "由拳路新气象路",
+"longitude": "120.7535111903009",
+"latitude": "30.73034540184611",
+"surveyCount": 3
+},
+{
+"id": 876,
+"siteCode": 0,
+"siteName": "三景花园",
+"longitude": "120.77924967298175",
+"latitude": "30.757621141010063",
+"surveyCount": 1
+},
+{
+"id": 594,
+"siteCode": 0,
+"siteName": "市人力资源中心西",
+"longitude": "120.75134932984798",
+"latitude": "30.77628922234169",
+"surveyCount": 1
+},
+{
+"id": 427,
+"siteCode": 0,
+"siteName": "嘉城绿都秋菊苑",
+"longitude": "120.7845068045435",
+"latitude": "30.772938456299368",
+"surveyCount": 1
+},
+{
+"id": 892,
+"siteCode": 0,
+"siteName": "中丝苑",
+"longitude": "120.72774053065056",
+"latitude": "30.765333115449547",
+"surveyCount": 1
+},
+{
+"id": 483,
+"siteCode": 0,
+"siteName": "长中苑（海棠苑）",
+"longitude": "120.76997429208636",
+"latitude": "30.745773889932032",
+"surveyCount": 4
+},
+{
+"id": 633,
+"siteCode": 0,
+"siteName": "塘汇实验学校",
+"longitude": "120.78218937510123",
+"latitude": "30.792677277521804",
+"surveyCount": 2
+},
+{
+"id": 139,
+"siteCode": 0,
+"siteName": "汇龙苑",
+"longitude": "120.77194417578045",
+"latitude": "30.742985840094967",
+"surveyCount": 4
+},
+{
+"id": 27,
+"siteCode": 0,
+"siteName": "城东路鸣羊路",
+"longitude": "120.78910411255617",
+"latitude": "30.79042846566619",
+"surveyCount": 1
+},
+{
+"id": 356,
+"siteCode": 0,
+"siteName": "当代华府",
+"longitude": "120.79717218877742",
+"latitude": "30.752799115099926",
+"surveyCount": 2
+},
+{
+"id": 673,
+"siteCode": 0,
+"siteName": "文贤苑",
+"longitude": "120.77782606775098",
+"latitude": "30.725573731954977",
+"surveyCount": 5
+},
+{
+"id": 775,
+"siteCode": 0,
+"siteName": "南湖景区（游客服务中心）",
+"longitude": "120.76525390253742",
+"latitude": "30.747792436077557",
+"surveyCount": 2
+},
+{
+"id": 244,
+"siteCode": 0,
+"siteName": "龙盛路秀清路",
+"longitude": "120.69535017010341",
+"latitude": "30.752292004777413",
+"surveyCount": 2
+},
+{
+"id": 940,
+"siteCode": 0,
+"siteName": "春晓源一期南",
+"longitude": "120.70931901066554",
+"latitude": "30.766404834610917",
+"surveyCount": 2
+},
+{
+"id": 406,
+"siteCode": 0,
+"siteName": "龙盛路中山西路",
+"longitude": "120.69769978520348",
+"latitude": "30.755583563866224",
+"surveyCount": 1
+},
+{
+"id": 831,
+"siteCode": 0,
+"siteName": "云洲苑小区",
+"longitude": "120.77565534388344",
+"latitude": "30.745214431995997",
+"surveyCount": 11
+},
+{
+"id": 280,
+"siteCode": 0,
+"siteName": "嘉通集团",
+"longitude": "120.76025962860496",
+"latitude": "30.720486246260617",
+"surveyCount": 1
+},
+{
+"id": 607,
+"siteCode": 0,
+"siteName": "蔬菜水产品市场",
+"longitude": "120.70131003853992",
+"latitude": "30.74640472007983",
+"surveyCount": 1
+},
+{
+"id": 325,
+"siteCode": 0,
+"siteName": "嘉职院东",
+"longitude": "120.71680785063643",
+"latitude": "30.745395049546122",
+"surveyCount": 3
+},
+{
+"id": 153,
+"siteCode": 0,
+"siteName": "府南花园一区",
+"longitude": "120.75174093235985",
+"latitude": "30.732858449167946",
+"surveyCount": 4
+},
+{
+"id": 476,
+"siteCode": 0,
+"siteName": "中环东路南溪西路",
+"longitude": "120.78059813249193",
+"latitude": "30.75642863691289",
+"surveyCount": 3
+},
+{
+"id": 701,
+"siteCode": 0,
+"siteName": "紫竹名苑南",
+"longitude": "120.78342855611703",
+"latitude": "30.752872879102988",
+"surveyCount": 6
+},
+{
+"id": 639,
+"siteCode": 0,
+"siteName": "同济大学浙江学院",
+"longitude": "120.78100920270782",
+"latitude": "30.73096790880271",
+"surveyCount": 2
+},
+{
+"id": 225,
+"siteCode": 0,
+"siteName": "象贤花苑",
+"longitude": "120.68057555996069",
+"latitude": "30.76026309995488",
+"surveyCount": 2
+},
+{
+"id": 361,
+"siteCode": 0,
+"siteName": "广益路景宜路",
+"longitude": "120.78458727084085",
+"latitude": "30.737847464245004",
+"surveyCount": 2
+},
+{
+"id": 416,
+"siteCode": 0,
+"siteName": "落帆亭",
+"longitude": "120.7548522948301",
+"latitude": "30.77497566055071",
+"surveyCount": 2
+},
+{
+"id": 1,
+"siteCode": 0,
+"siteName": "中山东路安乐路",
+"longitude": "120.74594199684059",
+"latitude": "30.761341216917057",
+"surveyCount": 1
+},
+{
+"id": 666,
+"siteCode": 0,
+"siteName": "文桥路新气象路",
+"longitude": "120.75299153634413",
+"latitude": "30.73340983005788",
+"surveyCount": 4
+},
+{
+"id": 743,
+"siteCode": 0,
+"siteName": "秀洲区政府（牙博士口腔秀洲机构）",
+"longitude": "120.70807993409974",
+"latitude": "30.763480080843998",
+"surveyCount": 1
+},
+{
+"id": 461,
+"siteCode": 0,
+"siteName": "南湖区消防大队",
+"longitude": "120.80747187140388",
+"latitude": "30.751628147350615",
+"surveyCount": 7
+},
+{
+"id": 464,
+"siteCode": 0,
+"siteName": "中环东路望湖路",
+"longitude": "120.78043465602578",
+"latitude": "30.74842059045793",
+"surveyCount": 1
+},
+{
+"id": 449,
+"siteCode": 0,
+"siteName": "南湖高级中学东",
+"longitude": "120.7683545368025",
+"latitude": "30.754089928869877",
+"surveyCount": 1
+},
+{
+"id": 146,
+"siteCode": 0,
+"siteName": "府南花园二区",
+"longitude": "120.75144588937462",
+"latitude": "30.729630670215386",
+"surveyCount": 2
+},
+{
+"id": 714,
+"siteCode": 0,
+"siteName": "金都佳苑东",
+"longitude": "120.69253921505441",
+"latitude": "30.755652713056197",
+"surveyCount": 1
+},
+{
+"id": 389,
+"siteCode": 0,
+"siteName": "东升苑",
+"longitude": "120.73623240193932",
+"latitude": "30.772601989767754",
+"surveyCount": 2
+},
+{
+"id": 436,
+"siteCode": 0,
+"siteName": "昌盛北路禾兴北路",
+"longitude": "120.74037127110164",
+"latitude": "30.791513771398886",
+"surveyCount": 4
+},
+{
+"id": 38,
+"siteCode": 0,
+"siteName": "昌盛花园西区",
+"longitude": "120.7161426630664",
+"latitude": "30.78217929862788",
+"surveyCount": 1
+},
+{
+"id": 812,
+"siteCode": 0,
+"siteName": "洪越路友谊街",
+"longitude": "120.73075533263099",
+"latitude": "30.767596342979086",
+"surveyCount": 1
+},
+{
+"id": 35,
+"siteCode": 0,
+"siteName": "昌盛花园东区",
+"longitude": "120.71957167619296",
+"latitude": "30.783241382229917",
+"surveyCount": 2
+},
+{
+"id": 320,
+"siteCode": 0,
+"siteName": "嘉兴一中",
+"longitude": "120.77088654273228",
+"latitude": "30.74041564085392",
+"surveyCount": 9
+},
+{
+"id": 140,
+"siteCode": 0,
+"siteName": "市第一医院北",
+"longitude": "120.74191331946028",
+"latitude": "30.740037565792417",
+"surveyCount": 2
+},
+{
+"id": 90,
+"siteCode": 0,
+"siteName": "春晓源一期",
+"longitude": "120.7104784722697",
+"latitude": "30.768268622053597",
+"surveyCount": 2
+},
+{
+"id": 761,
+"siteCode": 0,
+"siteName": "亚厦风和苑",
+"longitude": "120.70832133291154",
+"latitude": "30.75690199995993",
+"surveyCount": 1
+},
+{
+"id": 106,
+"siteCode": 0,
+"siteName": "望湖路云东路",
+"longitude": "120.79698443414651",
+"latitude": "30.748820532797687",
+"surveyCount": 7
+},
+{
+"id": 148,
+"siteCode": 0,
+"siteName": "府南花园三区",
+"longitude": "120.75217545021476",
+"latitude": "30.72478418757039",
+"surveyCount": 3
+},
+{
+"id": 762,
+"siteCode": 0,
+"siteName": "吴越路亚厦路",
+"longitude": "120.7140237092823",
+"latitude": "30.756118316358165",
+"surveyCount": 1
+},
+{
+"id": 350,
+"siteCode": 0,
+"siteName": "泾水公寓西区",
+"longitude": "120.78386307413868",
+"latitude": "30.757616532317293",
+"surveyCount": 1
+},
+{
+"id": 3,
+"siteCode": 0,
+"siteName": "澳洲花园西",
+"longitude": "120.78093560824485",
+"latitude": "30.74237897756303",
+"surveyCount": 4
+},
+{
+"id": 173,
+"siteCode": 0,
+"siteName": "格林小镇",
+"longitude": "120.78540802710884",
+"latitude": "30.738898720420984",
+"surveyCount": 1
+},
+{
+"id": 203,
+"siteCode": 0,
+"siteName": "金都景苑南",
+"longitude": "120.71770370811198",
+"latitude": "30.756104495832222",
+"surveyCount": 4
+},
+{
+"id": 369,
+"siteCode": 0,
+"siteName": "名都绿洲",
+"longitude": "120.6977641582195",
+"latitude": "30.759386695800057",
+"surveyCount": 5
+},
+{
+"id": 235,
+"siteCode": 0,
+"siteName": "金都九月洋房",
+"longitude": "120.68713724609448",
+"latitude": "30.755228597213037",
+"surveyCount": 5
+},
+{
+"id": 112,
+"siteCode": 0,
+"siteName": "东大营",
+"longitude": "120.78237176537817",
+"latitude": "30.761650066686652",
+"surveyCount": 1
+},
+{
+"id": 467,
+"siteCode": 0,
+"siteName": "南湖区行政中心南",
+"longitude": "120.78248521600416",
+"latitude": "30.74379076253866",
+"surveyCount": 5
+},
+{
+"id": 649,
+"siteCode": 0,
+"siteName": "万家花园",
+"longitude": "120.7777529998485",
+"latitude": "30.75277145595255",
+"surveyCount": 1
+},
+{
+"id": 685,
+"siteCode": 0,
+"siteName": "夏霖路广益路",
+"longitude": "120.85703909399517",
+"latitude": "30.74129166485945",
+"surveyCount": 1
+},
+{
+"id": 884,
+"siteCode": 0,
+"siteName": "中环西路东升路",
+"longitude": "120.72593572790053",
+"latitude": "30.773708996143817",
+"surveyCount": 2
+},
+{
+"id": 908,
+"siteCode": 0,
+"siteName": "昌盛中路东升西路",
+"longitude": "120.71594819372754",
+"latitude": "30.777800353452424",
+"surveyCount": 1
+},
+{
+"id": 494,
+"siteCode": 0,
+"siteName": "望湖路农翔路",
+"longitude": "120.77536892720516",
+"latitude": "30.74882948220185",
+"surveyCount": 1
+},
+{
+"id": 295,
+"siteCode": 0,
+"siteName": "市检验检疫局西",
+"longitude": "120.71571886538148",
+"latitude": "30.750364961406923",
+"surveyCount": 1
+},
+{
+"id": 687,
+"siteCode": 0,
+"siteName": "香缇世家",
+"longitude": "120.77466021338053",
+"latitude": "30.71481884085777",
+"surveyCount": 1
+},
+{
+"id": 801,
+"siteCode": 0,
+"siteName": "城北路永安路",
+"longitude": "120.7372999208752",
+"latitude": "30.780381891257473",
+"surveyCount": 1
+},
+{
+"id": 877,
+"siteCode": 0,
+"siteName": "中环南路城南路",
+"longitude": "120.7356208584333",
+"latitude": "30.741042693084108",
+"surveyCount": 2
+},
+{
+"id": 924,
+"siteCode": 0,
+"siteName": "老07省道夏义路",
+"longitude": "120.85378289225429",
+"latitude": "30.74852547496317",
+"surveyCount": 1
+},
+{
+"id": 75,
+"siteCode": 0,
+"siteName": "城南农贸市场（市第一医院西）",
+"longitude": "120.7361787577712",
+"latitude": "30.738207105139246",
+"surveyCount": 2
+},
+{
+"id": 626,
+"siteCode": 0,
+"siteName": "探花苑",
+"longitude": "120.77381015136542",
+"latitude": "30.74680582354423",
+"surveyCount": 8
+},
+{
+"id": 216,
+"siteCode": 0,
+"siteName": "荷花堤（月河历史街区）",
+"longitude": "120.75056076042326",
+"latitude": "30.769476943894674",
+"surveyCount": 1
+},
+{
+"id": 657,
+"siteCode": 0,
+"siteName": "文昌路城南路",
+"longitude": "120.74116230106688",
+"latitude": "30.748848195620027",
+"surveyCount": 1
+},
+{
+"id": 881,
+"siteCode": 0,
+"siteName": "中环西路（朝聚眼科医院）",
+"longitude": "120.725687920357",
+"latitude": "30.767231270866187",
+"surveyCount": 1
+},
+{
+"id": 378,
+"siteCode": 0,
+"siteName": "南湖国际实验学校西（行政审批中心西）",
+"longitude": "120.78991462882263",
+"latitude": "30.74298078459625",
+"surveyCount": 2
+},
+{
+"id": 535,
+"siteCode": 0,
+"siteName": "锦绣农贸市场东",
+"longitude": "120.76274335447098",
+"latitude": "30.78020675510313",
+"surveyCount": 1
+},
+{
+"id": 459,
+"siteCode": 0,
+"siteName": "南湖区人武部",
+"longitude": "120.78906119719004",
+"latitude": "30.748843588461504",
+"surveyCount": 3
+},
+{
+"id": 376,
+"siteCode": 0,
+"siteName": "康桥花园北",
+"longitude": "120.78701121769951",
+"latitude": "30.744239763760923",
+"surveyCount": 3
+},
+{
+"id": 126,
+"siteCode": 0,
+"siteName": "都市文涛苑",
+"longitude": "120.77713072715312",
+"latitude": "30.737824408414816",
+"surveyCount": 4
+},
+{
+"id": 221,
+"siteCode": 0,
+"siteName": "洪波农贸市场",
+"longitude": "120.73872341723239",
+"latitude": "30.766045737502367",
+"surveyCount": 1
+},
+{
+"id": 256,
+"siteCode": 0,
+"siteName": "大华城市花园",
+"longitude": "120.75478255739701",
+"latitude": "30.736358161421144",
+"surveyCount": 1
+},
+{
+"id": 341,
+"siteCode": 0,
+"siteName": "交通银行嘉兴分行",
+"longitude": "120.73753595521407",
+"latitude": "30.76005972144431",
+"surveyCount": 2
+},
+{
+"id": 903,
+"siteCode": 0,
+"siteName": "子城南",
+"longitude": "120.75273871409928",
+"latitude": "30.75809595206067",
+"surveyCount": 1
+},
+{
+"id": 23,
+"siteCode": 0,
+"siteName": "金都景苑（财富假日酒店）",
+"longitude": "120.71901291655513",
+"latitude": "30.758509000091827",
+"surveyCount": 2
+},
+{
+"id": 271,
+"siteCode": 0,
+"siteName": "嘉禾北京城",
+"longitude": "120.75183406029001",
+"latitude": "30.77349344577644",
+"surveyCount": 1
+},
+{
+"id": 237,
+"siteCode": 0,
+"siteName": "常秀街洪殷路",
+"longitude": "120.72020583861992",
+"latitude": "30.76856329993763",
+"surveyCount": 1
+},
+{
+"id": 298,
+"siteCode": 0,
+"siteName": "市检验检疫局南",
+"longitude": "120.71687222362978",
+"latitude": "30.74944753723657",
+"surveyCount": 1
+},
+{
+"id": 712,
+"siteCode": 0,
+"siteName": "常秀街同德路",
+"longitude": "120.71955187367861",
+"latitude": "30.77938043387952",
+"surveyCount": 1
+},
+{
+"id": 612,
+"siteCode": 0,
+"siteName": "双溪花园",
+"longitude": "120.79470455648155",
+"latitude": "30.752651592385337",
+"surveyCount": 4
+},
+{
+"id": 665,
+"siteCode": 0,
+"siteName": "东菱阳光乐园",
+"longitude": "120.75596809382768",
+"latitude": "30.7342048618806",
+"surveyCount": 1
+},
+{
+"id": 886,
+"siteCode": 0,
+"siteName": "中南公寓",
+"longitude": "120.7867276744445",
+"latitude": "30.72990273432431",
+"surveyCount": 1
+},
+{
+"id": 544,
+"siteCode": 0,
+"siteName": "市人才公寓",
+"longitude": "120.72821796369503",
+"latitude": "30.73450919148027",
+"surveyCount": 1
+},
+{
+"id": 0,
+"siteCode": 0,
+"siteName": "嘉兴一中实验南门",
+"longitude": "120.772816",
+"latitude": "30.738425",
+"surveyCount": 0
+}
+]

@@ -1,10 +1,25 @@
 package com.auxiliarybus.prim;
 
+import java.util.HashMap;
+
 /**
  * Created by wangch on 2019/4/24
  */
 public class GraphWG {
-    VertexWG[] vertexArray=new VertexWG[100];
-    int verNum=0;
-    long edgeNum=0;
+    int edgeNum;
+    VertexWG[] vertexArray;
+
+    HashMap<Integer,VertexWG> VertexWGmap = new HashMap<>();
+
+    int verNum;
+
+
+    public GraphWG(int edgeNum,  int verNum) {
+        this.edgeNum = edgeNum;
+        this.vertexArray = new VertexWG[verNum];
+        this.verNum = verNum;
+    }
+
+
+
 }
