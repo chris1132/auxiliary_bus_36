@@ -1,12 +1,11 @@
-package com.auxiliarybus.prim;
+package com.auxiliarybus.prim.plugin;
 
 
 
-import com.auxiliarybus.entity.BusSiteLocation;
 
 import java.util.List;
 
-import static com.auxiliarybus.prim.DistanceComputerUtil.getDistance;
+import static com.auxiliarybus.prim.plugin.util.DistanceComputerUtil.getDistance;
 
 /**
  * Created by wangch on 2019/4/24
@@ -15,11 +14,12 @@ import static com.auxiliarybus.prim.DistanceComputerUtil.getDistance;
 public class CreateWG {
 
     double infinity=10.0/0.0;
+
     /**
      * 初始化一个无向带权图，并且每个顶点包含parent域和key域
      * @param graph 生成的图
      */
-     public void initialWg(GraphWG graph, List<BusSiteLocation> list){
+     public void initialWg(GraphWG graph, List<BusSiteLocationGD> list){
 
 
          //顶点初始化
@@ -38,8 +38,8 @@ public class CreateWG {
          for(int k=0;k<graph.verNum;k++) {
              //赋值图的边及权重
              for (int j = 0; j < graph.verNum && j != k; j++) {
-                 BusSiteLocation preVQues = list.get(k);
-                 BusSiteLocation folVQues = list.get(j);
+                 BusSiteLocationGD preVQues = list.get(k);
+                 BusSiteLocationGD folVQues = list.get(j);
 
                  /**经纬度计算直线距离给权重*/
                  //TODO 调用百度api计算路径长度
@@ -49,24 +49,13 @@ public class CreateWG {
                  createEdge( graph, preVQues.getId(),weight,folVQues.getSiteName());
                  createEdge( graph, folVQues.getId(),weight,preVQues.getSiteName());
 
-//                 VertexWG v1 = getVertex(graph, preVQues.getId());
-//                 VertexWG v2 = new VertexWG();
-//                 v2.verName = folVQues.getSiteName();
-//                 v2.weight = weight;
-//                 v2.nextNode = v1.nextNode;
-//                 v1.nextNode = v2;
-//
-//
-//                 VertexWG reV2 = getVertex(graph, folVQues.getId());
-//                 VertexWG reV1 = new VertexWG();
-//                 reV1.verName = preVQues.getSiteName();
-//                 reV1.weight = weight;
-//                 reV1.nextNode = reV2.nextNode;
-//                 reV2.nextNode = reV1;
              }
          }
      }
 
+     /**
+      * 创建图的边
+      * */
      public void createEdge(GraphWG graph,int id,int weight,String verName){
          VertexWG v1 = getVertex(graph, id);
          VertexWG v2 = new VertexWG();
@@ -78,8 +67,10 @@ public class CreateWG {
 
     /**
      * 根据经纬度计算路程
+     *
+     * 应该调用百度api计算路径长度
      * */
-     public int getDis(BusSiteLocation preVQues,BusSiteLocation folVQues){
+     public int getDis(BusSiteLocationGD preVQues,BusSiteLocationGD folVQues){
          return (int)getDistance(Double.valueOf(preVQues.getLongitude()),
                  Double.valueOf(preVQues.getLatitude()),
                  Double.valueOf(folVQues.getLongitude()),
@@ -87,7 +78,7 @@ public class CreateWG {
      }
 
     /**
-     * 根据用户输入的string类型的顶点返回该顶点
+     * 根据用户输入的id顶点返回该顶点
      * @param graph 图
      * @param id 输入数据
      * @return返回一个顶点

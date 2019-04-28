@@ -1,5 +1,7 @@
-package com.auxiliarybus.prim;
+package com.auxiliarybus.prim.plugin;
 
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by wangch on 2019/4/24
@@ -42,6 +44,7 @@ public class Prim {
              minHeap[c/2]=ver;
          }
     }
+
     /**
      * 最小堆删除两种思路，一种和前面一样，就是一直跟踪放在根节点的那个最后一个节点最终插入的位置
      * 另一种思路便是每一次完成完整的交换然后下一一层在进行同样处理
@@ -62,6 +65,7 @@ public class Prim {
         minHeap[j]=ver1;
         return ver;
     }
+
     /**
      * 从这里返回minHeap中的顶点对象
      * @param name 定点的名字
@@ -73,11 +77,16 @@ public class Prim {
                 return minHeap[i];
         }
         return null;
-    } /**
+    }
+
+
+    /**
      * MST的Prim算法具体实现函数
      * @param graph 图
      */
-    public void primSpanningTree(GraphWG graph){
+    public List<VertexWG> primSpanningTree(GraphWG graph){
+        List<VertexWG> reslist = new ArrayList<>();
+        /**取id=0的点，即嘉兴一中南门,作为图的根节点*/
         VertexWG verRoot=CreateWG.getVertex(graph,0);
 
         verRoot.key=0;
@@ -86,7 +95,7 @@ public class Prim {
             verArray[i]=graph.vertexArray[i];
         }
         createMinHeap(verArray);
-        System.out.println("利用prim算法生成最小生成树,从嘉兴一中出发的顺序为:");
+        System.out.println("利用prim算法生成最小生成树,从嘉兴一中南门出发的（公交站）顺序为:");
         while(currentSize>=1){
             //minHeap中的对象和graph.vertexArray中的不是同一个对象 //
             // minHeaph中的对象已经是新产生的对象了
@@ -99,7 +108,8 @@ public class Prim {
             createMinHeap(vArray);
             VertexWG u=deleteMinHeap();
 
-            if(u.count>0)System.out.println("--->"+u.verName+"（公交站）  "+u.count+"个人");
+            System.out.println("--->"+u.verName+ (u.verid==0?"（集合出发）":"（公交站）"+u.count+"个人"));
+            reslist.add(u);
 
             VertexWG current=u.nextNode;
             //注意下面while循环中的两个不同的顶点对象：
@@ -113,6 +123,7 @@ public class Prim {
                 current=current.nextNode;
             }
         }
+        return reslist;
     }
 
 

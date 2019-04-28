@@ -1,4 +1,4 @@
-package com.auxiliarybus.prim;
+package com.auxiliarybus.prim.plugin;
 
 import java.util.HashMap;
 
