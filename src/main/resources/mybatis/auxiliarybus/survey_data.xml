@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.auxiliarybus.mapper.SurveyDataMapper">
+    <resultMap id="SurveyDataMap" type="com.auxiliarybus.entity.SurveyData">
+        <result property="id" column="id"/>
+        <result property="School" column="School"/>
+        <result property="HomeLocation" column="HomeLocation"/>
+        <result property="Location" column="Location"/>
+        <result property="grade" column="grade"/>
+        <result property="nightBus" column="NightBus"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, School, HomeLocation, Location,grade,NightBus
+    </sql>
+
+    <select id="getSurveyDataById" parameterType="int" resultMap="SurveyDataMap">
+        select * from survey_data where id = #{id}
+    </select>
+
+
+    <select id="getList" resultMap="SurveyDataMap">
+        <![CDATA[
+            select
+        ]]>
+        <include refid="Base_Column_List"/>
+        <![CDATA[
+            from survey_data where WillingToTakeBus = 1;
+        ]]>
+    </select>
+</mapper>

@@ -5,6 +5,7 @@ package com.auxiliarybus.util;
  */
 public class URLUtil {
 
-    public static String staticFileDomain="http://www.dzgj.com/";
+    //    public static String staticFileDomain="http://www.dzgj.com/";
+    public static String staticFileDomain = "http://192.168.11.204:8089";
 
 }

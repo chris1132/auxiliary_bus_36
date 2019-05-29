@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
  * Created by wangchaohui on 2019/1/25
  */
 @RestController
-public class CreateLocationController {
+public class RPCController {
 
     @Autowired
     public RpcImplement4Client rpcClient;

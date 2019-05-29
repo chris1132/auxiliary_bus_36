@@ -19,7 +19,9 @@ import java.util.List;
  */
 public class MainFunc {
 
-    /**扇区数  偶数项*/
+    /**
+     * 扇区数  偶数项
+     */
     private static final int sector_num = 4;
 
 
@@ -28,54 +30,55 @@ public class MainFunc {
         /***
          * 作为根节点
          * */
-        BusSiteLocationGD originSite = new BusSiteLocationGD(0,0,"嘉兴一中实验南门","120.772816","30.738425");
+        BusSiteLocationGD originSite = new BusSiteLocationGD(0, 0, "嘉兴一中实验南门", "120.772816", "30.738425", 0);
 
-        HashMap<Integer,List<BusSiteLocationGD>> sectorMap = new HashMap<>();
-        for(int i = 1 ;i <=sector_num;i++){
-            sectorMap.put(i,new ArrayList<>(List.of(originSite)));
+        HashMap<Integer, List<BusSiteLocationGD>> sectorMap = new HashMap<>();
+        for (int i = 1; i <= sector_num; i++) {
+            sectorMap.put(i, new ArrayList<>(List.of(originSite)));
         }
 
 
+        /**获取数据*/
         List<BusSiteLocationGD> totallist = JacksonUtil.str2list(getDatafromFile(), BusSiteLocationGD.class);
+        /**4个扇区分别封装数据*/
+        for (BusSiteLocationGD site : totallist) {
+            var theta = getTheta(originSite, site);
 
-        for(BusSiteLocationGD site : totallist){
-            var theta =  getTheta(originSite,site);
-
-            if(theta>=0 && theta<90){
+            if (theta >= 0 && theta < 90) {
                 List<BusSiteLocationGD> listPart1 = sectorMap.get(1);
                 listPart1.add(site);
-                sectorMap.put(1,listPart1);
-            }else if(theta>=90 && theta<=180){
+                sectorMap.put(1, listPart1);
+            } else if (theta >= 90 && theta <= 180) {
                 List<BusSiteLocationGD> listPart2 = sectorMap.get(2);
                 listPart2.add(site);
-                sectorMap.put(2,listPart2);
-            }else if(theta<0 && theta>=-90){
+                sectorMap.put(2, listPart2);
+            } else if (theta < 0 && theta >= -90) {
                 List<BusSiteLocationGD> listPart3 = sectorMap.get(3);
                 listPart3.add(site);
-                sectorMap.put(3,listPart3);
-            }else if(theta<-90 && theta>=-180){
+                sectorMap.put(3, listPart3);
+            } else if (theta < -90 && theta >= -180) {
                 List<BusSiteLocationGD> listPart4 = sectorMap.get(4);
                 listPart4.add(site);
-                sectorMap.put(4,listPart4);
+                sectorMap.put(4, listPart4);
             }
         }
 
 
-        for(int i = 1 ;i <=sector_num;i++) {
-            System.out.println("第"+i+"扇区结果：");
+        for (int i = 1; i <= sector_num; i++) {
+            System.out.println("第" + i + "扇区结果：");
 
             List<BusSiteLocationGD> listPart = sectorMap.get(i);
             //节点数
             int verNum = listPart.size();
             //边数
-            int edgeNum = verNum*(verNum-1);
+            int edgeNum = verNum * (verNum - 1);
 
-            GraphWG graph=new GraphWG(edgeNum,verNum);
-            CreateWG createWG=new CreateWG();
+            GraphWG graph = new GraphWG(edgeNum, verNum);
+            CreateWG createWG = new CreateWG();
 
-            createWG.initialWg(graph,listPart);
-        //        createWG.outputWG(graph);
-            Prim prim=new Prim(verNum);
+            createWG.initialWg(graph, listPart);
+            //        createWG.outputWG(graph);
+            Prim prim = new Prim(verNum);
             var res = prim.primSpanningTree(graph);
 
 
@@ -88,10 +91,10 @@ public class MainFunc {
     /**
      * 获取站点数据
      * type：json
-     * */
+     */
     private static String getDatafromFile() {
 
-        String Path="F:\\excel\\busSiteLocationJson.json";
+        String Path = "F:\\excel\\busSiteLocationJson.json";
         BufferedReader reader = null;
         String laststr = "";
         try {
@@ -120,13 +123,13 @@ public class MainFunc {
 
     /**
      * 计算角度
-     * */
-    private static Double getTheta(BusSiteLocationGD originSite,BusSiteLocationGD destinationSite){
+     */
+    private static Double getTheta(BusSiteLocationGD originSite, BusSiteLocationGD destinationSite) {
         // 将矩形坐标 (x, y) 转换成极坐标 (r, thet));
         //计算弧度
-        var angle = Math.atan2(Double.valueOf(originSite.getLongitude())-Double.valueOf(destinationSite.getLongitude()),
-                Double.valueOf(originSite.getLatitude())-Double.valueOf(destinationSite.getLatitude()));
+        var angle = Math.atan2(Double.valueOf(originSite.getLongitude()) - Double.valueOf(destinationSite.getLongitude()),
+                Double.valueOf(originSite.getLatitude()) - Double.valueOf(destinationSite.getLatitude()));
 
-        return angle*(180/Math.PI);
+        return angle * (180 / Math.PI);
     }
 }

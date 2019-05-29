@@ -10,19 +10,19 @@ import javax.servlet.http.HttpServletRequest;
 public class BaseAspect {
 
 
-    public ModelAndView getModelAndView(Object[] args){
-        for(Object obj:args){
-            if(obj instanceof ModelAndView){
-                return  (ModelAndView)obj;
+    public ModelAndView getModelAndView(Object[] args) {
+        for (Object obj : args) {
+            if (obj instanceof ModelAndView) {
+                return (ModelAndView) obj;
             }
         }
         return null;
     }
 
-    public HttpServletRequest getHttpServletRequest(Object[] args){
-        for(Object obj:args){
-            if(obj instanceof HttpServletRequest){
-                return  (HttpServletRequest)obj;
+    public HttpServletRequest getHttpServletRequest(Object[] args) {
+        for (Object obj : args) {
+            if (obj instanceof HttpServletRequest) {
+                return (HttpServletRequest) obj;
             }
         }
         return null;

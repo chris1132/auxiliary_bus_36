@@ -1,33 +1,59 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.auxiliarybus.mapper.BusSiteLocationMapper">
-    <resultMap id="StudentMap" type="com.auxiliarybus.entity.BusSiteLocation">
+    <resultMap id="BusSiteLocationMap" type="com.auxiliarybus.entity.BusSiteLocation">
         <result property="id" column="id"/>
-        <result property="code`" column="code`"/>
-        <result property="age" column="age"/>
-        <result property="grade" column="grade"/>
+        <result property="siteCode" column="site_num"/>
+        <result property="siteName" column="site_name"/>
+        <result property="longitude" column="longitude"/>
+        <result property="latitude" column="latitude"/>
+        <result property="surveyCount" column="count"/>
     </resultMap>
 
     <sql id="Base_Column_List">
-        id, name, age, grade
+        id, site_num, site_name, longitude,latitude
     </sql>
-    <select id="getStudentById" parameterType="int" resultMap="StudentMap">
-        select * from student where id = #{id}
-    </select>
 
-    <insert id="insert" parameterType="com.auxiliarybus.entity.Student">
-        <![CDATA[
-            INSERT into student(name,age,grade) values(#{name},#{age},#{grade})
-        ]]>
+    <!-- 批量插入生成-->
+    <insert id="insertBusSiteBatch" parameterType="java.util.List">
+        <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into bus_site_location_gd
+        (id,site_num, site_name,longitude, latitude,created_at)
+        values
+        <foreach collection="list" item="busSiteLocationList" index="index" separator=",">
+            (
+            #{busSiteLocationList.id},
+            #{busSiteLocationList.siteNum},
+            #{busSiteLocationList.siteName},
+            #{busSiteLocationList.longitude},
+            #{busSiteLocationList.latitude},
+            now()
+            )
+        </foreach>
     </insert>
 
-    <select id="getList" resultMap="StudentMap">
+    <select id="getList" resultMap="BusSiteLocationMap">
         <![CDATA[
             select
         ]]>
         <include refid="Base_Column_List"/>
         <![CDATA[
-            from student
+            from bus_site_location_gd WHERE id<941
         ]]>
+    </select>
+
+
+    <select id="getListwithcount" parameterType="int" resultMap="BusSiteLocationMap">
+
+        SELECT b.id,b.site_name,b.longitude,b.latitude,q.count from bus_site_location as b
+        right join(SELECT count(*) as count,affiliated_site_code from questionnaire
+        <if test="gradeType =='1'.toString() ">where grade in (1,2) and night_bus = 1</if>
+        <if test="gradeType =='2'.toString() ">where grade = 4  and night_bus = 1</if>
+        <if test="gradeType =='3'.toString() ">where grade = 5 and  night_bus = 1</if>
+        GROUP BY affiliated_site_code) as q
+        on q.affiliated_site_code = b.site_num;
+
     </select>
 </mapper>

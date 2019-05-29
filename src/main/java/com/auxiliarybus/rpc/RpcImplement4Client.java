@@ -39,8 +39,8 @@ public class RpcImplement4Client {
         ServiceDiscovery serviceDiscovery = new ServiceDiscovery("127.0.0.1:2181");
         String serverAddress = serviceDiscovery.discoverService(className);
         String[] addressAry = serverAddress.split(":");
-        final RpcClient rpcClient = new RpcClient(addressAry[0],Integer.parseInt(addressAry[1]));
-        RpcResponse response = rpcClient.sendRequest(createRequest(className,funcName,args));
+        final RpcClient rpcClient = new RpcClient(addressAry[0], Integer.parseInt(addressAry[1]));
+        RpcResponse response = rpcClient.sendRequest(createRequest(className, funcName, args));
         Object result = response.getResult();
         return result;
     }
@@ -61,6 +61,7 @@ public class RpcImplement4Client {
         request.setParameterTypes(parameterTypes);
         return request;
     }
+
     private Class<?> getClassType(Object obj) {
         Class<?> classType = obj.getClass();
         String typeName = classType.getName();

@@ -17,7 +17,7 @@ public class ParameterIllegalController {
     @RequestMapping(value = "/parameterIllegal", method = RequestMethod.GET)
     public ModelAndView parameterIllegal(ModelAndView modelAndView) {
         System.out.println("illegal paramter");
-        modelAndView.addObject("name","参数错误");
+        modelAndView.addObject("name", "参数错误");
         modelAndView.setViewName("warn");
         System.out.println("illegal paramter");
         return modelAndView;

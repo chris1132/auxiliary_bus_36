@@ -20,32 +20,32 @@ import javax.sql.DataSource;
  * Created by wangchaohui on 2019/1/3
  */
 @Configuration
-@MapperScan(basePackages = "com.auxiliarybus.mapper",sqlSessionTemplateRef = "auxiliarybusSqlSessionTemplate")
+@MapperScan(basePackages = "com.auxiliarybus.mapper", sqlSessionTemplateRef = "auxiliarybusSqlSessionTemplate")
 @PropertySource(value = "classpath:datasource.properties")
 public class DataSourceConfig {
 
-    @Bean(name="auxiliarybusDataSource")
+    @Bean(name = "auxiliarybusDataSource")
     @ConfigurationProperties(prefix = "spring.datasource.auxiliarybus")
-    public DataSource auxiliarybusDataSource(){
+    public DataSource auxiliarybusDataSource() {
         return DataSourceBuilder.create().build();
     }
 
 
-    @Bean(name="auxiliarybusSqlSessionFactory")
-    public SqlSessionFactory auxiliarybusSqlSessionFactory(@Qualifier("auxiliarybusDataSource")DataSource dataSource)throws Exception {
+    @Bean(name = "auxiliarybusSqlSessionFactory")
+    public SqlSessionFactory auxiliarybusSqlSessionFactory(@Qualifier("auxiliarybusDataSource") DataSource dataSource) throws Exception {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource);
         sqlSessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mybatis/auxiliarybus/*.xml"));
         return sqlSessionFactoryBean.getObject();
     }
 
-    @Bean(name="auxiliarybusSqlSessionTemplate")
-    public SqlSessionTemplate auxiliarybusSqlSessionTemplate(@Qualifier("auxiliarybusSqlSessionFactory") SqlSessionFactory sqlSessionFactory){
+    @Bean(name = "auxiliarybusSqlSessionTemplate")
+    public SqlSessionTemplate auxiliarybusSqlSessionTemplate(@Qualifier("auxiliarybusSqlSessionFactory") SqlSessionFactory sqlSessionFactory) {
         return new SqlSessionTemplate(sqlSessionFactory);
     }
 
-    @Bean(name="auxiliarybusTransaction")
-    public DataSourceTransactionManager auxiliarybusTransaction(@Qualifier("auxiliarybusDataSource")DataSource dataSource){
+    @Bean(name = "auxiliarybusTransaction")
+    public DataSourceTransactionManager auxiliarybusTransaction(@Qualifier("auxiliarybusDataSource") DataSource dataSource) {
         return new DataSourceTransactionManager(dataSource);
     }
 }

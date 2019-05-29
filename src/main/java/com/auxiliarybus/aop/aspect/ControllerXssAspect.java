@@ -24,16 +24,16 @@ public class ControllerXssAspect extends BaseAspect {
 
     //参数检查是否是脚本 xss
     @Before("com.auxiliarybus.aop.pointcut.Pointcut.paramCheckPointCut()")
-    public void beforeCheck(JoinPoint joinPoint)throws Exception {
+    public void beforeCheck(JoinPoint joinPoint) throws Exception {
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
         HttpServletResponse response = attributes.getResponse();
 
         Object[] args = joinPoint.getArgs();
-        for(Object obj:args) {
-            if(StringUtil.isScript(obj.toString())){
+        for (Object obj : args) {
+            if (StringUtil.isScript(obj.toString())) {
                 try {
-                    response.sendRedirect(request.getContextPath()+"/parameterIllegal");
+                    response.sendRedirect(request.getContextPath() + "/parameterIllegal");
                 } catch (NullPointerException e) {
                     e.printStackTrace();
                 }

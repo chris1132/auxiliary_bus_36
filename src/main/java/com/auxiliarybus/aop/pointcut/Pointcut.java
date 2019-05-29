@@ -11,8 +11,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class Pointcut {
 
-    @org.aspectj.lang.annotation.Pointcut("execution(* com.auxiliarybus.controller..*(..)) && !execution(* com.auxiliarybus.controller.admin.CreateLocationController.*(..))")
-    public void paramCheckPointCut(){}
+    @org.aspectj.lang.annotation.Pointcut("execution(* com.auxiliarybus.controller..*(..)) && " +
+            "!execution(* com.auxiliarybus.controller.admin.RPCController.*(..)) && " +
+            "!execution(* com.auxiliarybus.controller.admin.ImportExcelController.*(..))")
+    public void paramCheckPointCut() {
+    }
 
 
 }

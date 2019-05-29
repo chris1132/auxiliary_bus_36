@@ -5,26 +5,49 @@ import java.util.Date;
 
 /**
  * Created by wangchaohui on 2018/1/18.
+ *
  * @Description 公交站点类
  */
-public class BusSiteLocation extends BaseEntity {
+public class BusSiteLocation {
+
+    public BusSiteLocation(Integer id, long siteCode, String siteName, String longitude, String latitude) {
+        /**公交站台本系统编号*/
+        this.id = id;
+        /**公交站台原始编号（来源公交公司）*/
+        this.siteCode = siteCode;
+        /**公交站台名*/
+        this.siteName = siteName;
+        /**公交站台经度*/
+        this.longitude = longitude;
+        /**公交站台维度*/
+        this.latitude = latitude;
+    }
+
+    public BusSiteLocation() {
+    }
+
     private Integer id;
     /**
-     * 源数据id
-     * */
-    private int code;
+     * 源数据id  线路编号
+     */
+    private long siteCode;
     /**
      * 站点名
-     * */
+     */
     private String siteName;
     /**
      * 经度
-     * */
+     */
     private String longitude;
     /**
      * 维度
-     * */
-    private Integer latitude;
+     */
+    private String latitude;
+
+    /**
+     * 站点拟合需求数统计
+     */
+    private int surveyCount;
 
     public Integer getId() {
         return id;
@@ -34,12 +57,12 @@ public class BusSiteLocation extends BaseEntity {
         this.id = id;
     }
 
-    public int getCode() {
-        return code;
+    public long getSiteCode() {
+        return siteCode;
     }
 
-    public void setCode(int code) {
-        this.code = code;
+    public void setSiteCode(long siteCode) {
+        this.siteCode = siteCode;
     }
 
     public String getSiteName() {
@@ -58,11 +81,31 @@ public class BusSiteLocation extends BaseEntity {
         this.longitude = longitude;
     }
 
-    public Integer getLatitude() {
+    public String getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(Integer latitude) {
+    public void setLatitude(String latitude) {
         this.latitude = latitude;
+    }
+
+    public int getSurveyCount() {
+        return surveyCount;
+    }
+
+    public void setSurveyCount(int surveyCount) {
+        this.surveyCount = surveyCount;
+    }
+
+    @Override
+    public String toString() {
+        return "BusSiteLocation{" +
+                "id=" + id +
+                ", siteCode=" + siteCode +
+                ", siteName='" + siteName + '\'' +
+                ", longitude='" + longitude + '\'' +
+                ", latitude='" + latitude + '\'' +
+                ", surveyCount=" + surveyCount +
+                '}';
     }
 }

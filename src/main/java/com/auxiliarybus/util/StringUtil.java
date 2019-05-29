@@ -115,15 +115,15 @@ public class StringUtil {
 
     /**
      * 校验是否是javascript脚本
-     * */
-    public static boolean isScript(String str){
+     */
+    public static boolean isScript(String str) {
         if (str == null || str.length() == 0) {
             return false;
         }
         String regEx = "<[\\s]*?[Ss][Cc][Rr][Ii][Pp][Tt][^>]*?>[\\s\\S]*?<[\\s]*?\\/[\\s]*?[Ss][Cc][Rr][Ii][Pp][Tt][\\s]*?>";
         Pattern pattern = Pattern.compile(regEx);
         Matcher matcher = pattern.matcher(str);
-        if(matcher.find()){
+        if (matcher.find()) {
             return true;
         }
         return false;

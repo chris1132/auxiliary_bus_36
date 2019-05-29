@@ -2,14 +2,12 @@ package com.auxiliarybus.controller.admin;
 
 
 import com.auxiliarybus.entity.Student;
+import com.auxiliarybus.entity.SurveyData;
 import com.auxiliarybus.service.StudentService;
+import com.auxiliarybus.service.SurveyDataService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 
 /**
@@ -21,15 +19,18 @@ public class AdminIndexController {
     @Autowired
     private StudentService studentService;
 
-
     @RequestMapping(value = "/index.htm", method = RequestMethod.GET)
     public ModelAndView test(ModelAndView model,
-                       @RequestParam(value = "id", defaultValue = "1", required = false) int id,
-                       @RequestParam(value="name",defaultValue = "wch",required = false)String name) {
-
-        var studentName =  studentService.getStudentById(id).getName();
-        model.addObject("studentName",studentName);
+                             @RequestParam(value = "id", defaultValue = "1", required = false) int id,
+                             @RequestParam(value = "name", defaultValue = "wch", required = false) String name) {
+        model.addObject("studentName", "chovy");
         model.setViewName("admin/dash_board");
+        return model;
+    }
+
+    @RequestMapping(value = "/table.htm", method = RequestMethod.GET)
+    public ModelAndView table(ModelAndView model) {
+        model.setViewName("admin/table-dynamic");
         return model;
     }
 

@@ -12,12 +12,12 @@ import java.util.List;
 public class JacksonUtil {
 
 
-    public static String list2String(List<? extends Object> list){
-        String jsonlist="";
+    public static String list2String(List<? extends Object> list) {
+        String jsonlist = "";
         try {
             ObjectMapper mapper = new ObjectMapper();
-             jsonlist = mapper.writeValueAsString(list);
-        }catch (JsonProcessingException e){
+            jsonlist = mapper.writeValueAsString(list);
+        } catch (JsonProcessingException e) {
             e.getMessage();
         }
         return jsonlist;

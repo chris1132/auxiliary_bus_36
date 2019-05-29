@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.auxiliarybus.mapper.QuestionnaireMapper">
+    <resultMap id="QuestionnaireMap" type="com.auxiliarybus.entity.Questionnaire">
+        <result property="id" column="id"/>
+        <result property="name" column="address_name"/>
+        <result property="longitude" column="longitude"/>
+        <result property="latitude" column="latitude"/>
+        <result property="affiliatedSiteCode" column="affiliated_site_code"/>
+        <result property="grade" column="grade"/>
+        <result property="nightBus" column="night_bus"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, address_name, longitude, latitude,affiliated_site_code,grade,night_bus
+    </sql>
+
+    <insert id="insert" parameterType="com.auxiliarybus.entity.Questionnaire">
+        <![CDATA[
+            INSERT into questionnaire(address_name, longitude, latitude,affiliated_site_code,grade,night_bus) values(#{name},#{longitude},#{latitude},#{affiliatedSiteCode},#{grade},#{nightBus})
+        ]]>
+    </insert>
+
+
+    <!-- 批量插入生成-->
+    <insert id="insertQuestionBatch" parameterType="java.util.List">
+        <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into questionnaire
+        (id,address_name, longitude, latitude,created_at,affiliated_site_code,grade,night_bus)
+        values
+        <foreach collection="list" item="questionnaireList" index="index" separator=",">
+            (
+            #{questionnaireList.id},
+            #{questionnaireList.name},
+            #{questionnaireList.longitude},
+            #{questionnaireList.latitude},
+            now(),
+            #{questionnaireList.affiliatedSiteCode},
+            #{questionnaireList.grade},
+            #{questionnaireList.nightBus}
+            )
+        </foreach>
+    </insert>
+
+
+    <select id="getList" resultMap="QuestionnaireMap">
+        <![CDATA[
+            select
+        ]]>
+        <include refid="Base_Column_List"/>
+        <![CDATA[
+            from questionnaire
+        ]]>
+    </select>
+
+    <update id="updateaffiliatedSiteCode" parameterType="com.auxiliarybus.entity.Questionnaire">
+        <![CDATA[
+          update questionnaire set affiliated_site_code = #{affiliatedSiteCode} where id = #{id}
+          ]]>
+
+    </update>
+</mapper>

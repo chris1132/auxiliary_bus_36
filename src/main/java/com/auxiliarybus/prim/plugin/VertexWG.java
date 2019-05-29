@@ -6,21 +6,21 @@ package com.auxiliarybus.prim.plugin;
 public class VertexWG {
 
     /**
-    * 节点id
-    * 对应站台id
-    * */
+     * 节点id
+     * 对应站台id
+     */
     int verid;
 
     /**
      * 节点名
      * 对应站台名
-     * */
+     */
     String verName;
 
     /**
      * 权重
      * 对应两站点间的距离
-     * */
+     */
     int weight;
 
 
@@ -28,7 +28,7 @@ public class VertexWG {
 
     /**
      * 对应拟合到该站台的需求数
-     * */
+     */
     int count;
     VertexWG parent;
     VertexWG nextNode;
